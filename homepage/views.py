@@ -6,7 +6,8 @@ def index(request):
     all_post = Post.objects.all()
     html = ''
     for post in all_post:
-        html += '<a href = "' + str(post.link) + '" target = "_blank">' + post.title + '</a> published by ' + post.author + '<br>'
+        html += '<a href = "' + str(
+            post.link) + '" target = "_blank">' + post.title + '</a> published by ' + post.author + '<br>'
     return HttpResponse(html)
 
 
